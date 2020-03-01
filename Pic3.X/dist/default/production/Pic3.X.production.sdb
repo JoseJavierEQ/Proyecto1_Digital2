@@ -1,0 +1,128 @@
+[p LITE_MODE AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F887 ]
+[d frameptr 6 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"33 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Pic3.X\Prin3.c
+[v _main main `(v  1 e 1 0 ]
+"42
+[v _mide_distancia mide_distancia `(v  1 e 1 0 ]
+[s S32 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"183 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\include\pic16f887.h
+[u S41 . 1 `S32 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES41  1 e 1 @5 ]
+"30 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Pic3.X\Prin3.c
+[v _tiempo_eco tiempo_eco `i  1 e 2 0 ]
+"31
+[v _distancia distancia `i  1 e 2 0 ]
+"33
+[v _main main `(v  1 e 1 0 ]
+{
+"40
+} 0
+"42
+[v _mide_distancia mide_distancia `(v  1 e 1 0 ]
+{
+"54
+} 0
+"10 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 6 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 5 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 9 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 4 ]
+"44
+} 0
+"43 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 46 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 45 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 36 ]
+"70
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S363 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S368 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S371 . 4 `l 1 i 4 0 `d 1 f 4 0 `S363 1 fAsBytes 4 0 `S368 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S371  1 a 4 30 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 24 ]
+[s S440 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S443 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S440 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S443  1 a 2 34 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 29 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 28 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 23 ]
+"8
+[v ___flmul@b b `d  1 p 4 10 ]
+[v ___flmul@a a `d  1 p 4 14 ]
+"205
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 7 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 6 ]
+[v ___awdiv@counter counter `uc  1 a 1 5 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 0 ]
+[v ___awdiv@dividend dividend `i  1 p 2 2 ]
+"41
+} 0
