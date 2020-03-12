@@ -345,192 +345,182 @@ Version 4.0 HI-TECH Software Intermediate Code
 "11 ./ADC.h
 [p x FOSC = INTRC_NOCLKOUT ]
 "15 Prin2.c
-[; ;Prin2.c: 15:         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
+[; ;Prin2.c: 15:             z = SSPBUF;
 [p x FOSC = INTRC_NOCLKOUT ]
 "16
-[; ;Prin2.c: 16:             z = SSPBUF;
+[; ;Prin2.c: 16:             SSPCONbits.SSPOV = 0;
 [p x WDTE = OFF ]
 "17
-[; ;Prin2.c: 17:             SSPCONbits.SSPOV = 0;
+[; ;Prin2.c: 17:             SSPCONbits.WCOL = 0;
 [p x PWRTE = OFF ]
 "18
-[; ;Prin2.c: 18:             SSPCONbits.WCOL = 0;
+[; ;Prin2.c: 18:             SSPCONbits.CKP = 1;
 [p x MCLRE = OFF ]
 "19
-[; ;Prin2.c: 19:             SSPCONbits.CKP = 1;
+[; ;Prin2.c: 19:         }
 [p x CP = OFF ]
 "20
-[; ;Prin2.c: 20:         }
+[; ;Prin2.c: 20: 
 [p x CPD = OFF ]
 "21
-[; ;Prin2.c: 21: 
+[; ;Prin2.c: 21:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
 [p x BOREN = OFF ]
 "22
-[; ;Prin2.c: 22:         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
+[; ;Prin2.c: 22: 
 [p x IESO = OFF ]
 "23
-[; ;Prin2.c: 23: 
+[; ;Prin2.c: 23:             z = SSPBUF;
 [p x FCMEN = OFF ]
 "24
-[; ;Prin2.c: 24:             z = SSPBUF;
+[; ;Prin2.c: 24: 
 [p x LVP = OFF ]
 "27
-[; ;Prin2.c: 27:             SSPCONbits.CKP = 1;
+[; ;Prin2.c: 27:             while(!SSPSTATbits.BF);
 [p x BOR4V = BOR40V ]
 "28
-[; ;Prin2.c: 28:             while(!SSPSTATbits.BF);
+[; ;Prin2.c: 28:             recibido = SSPBUF;
 [p x WRT = OFF ]
 "30
-[; ;Prin2.c: 30:             _delay((unsigned long)((250)*(4000000/4000000.0)));
+[; ;Prin2.c: 30: 
 [v _valor `i ~T0 @X0 1 e ]
 [i _valor
 -> 0 `i
 ]
 "31
-[; ;Prin2.c: 31: 
-[v _valor1 `i ~T0 @X0 1 e ]
-[i _valor1
--> 0 `i
-]
-"32
-[; ;Prin2.c: 32:         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+[; ;Prin2.c: 31:         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
 [v _z `uc ~T0 @X0 1 e ]
-"33
-[; ;Prin2.c: 33:             z = SSPBUF;
+"32
+[; ;Prin2.c: 32:             z = SSPBUF;
 [v _recibido `uc ~T0 @X0 1 e ]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"35
-[; ;Prin2.c: 35:             SSPBUF = valor1;
+"34
+[; ;Prin2.c: 34:             SSPBUF = valor;
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"36
-[; ;Prin2.c: 36:             SSPCONbits.CKP = 1;
+"35
+[; ;Prin2.c: 35:             SSPCONbits.CKP = 1;
 [e $ ! _ADIF 140  ]
 {
-"37
-[; ;Prin2.c: 37:             _delay((unsigned long)((250)*(4000000/4000000.0)));
+"36
+[; ;Prin2.c: 36:             _delay((unsigned long)((250)*(4000000/4000000.0)));
 [e = _valor -> _ADRESH `i ]
-"38
-[; ;Prin2.c: 38:             while(SSPSTATbits.BF);
+"37
+[; ;Prin2.c: 37:             while(SSPSTATbits.BF);
 [e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-"39
-[; ;Prin2.c: 39:         }
+"38
+[; ;Prin2.c: 38:         }
 [e = _ADIF -> -> 0 `i `b ]
-"40
-[; ;Prin2.c: 40: 
+"39
+[; ;Prin2.c: 39: 
 }
 [e :U 140 ]
-"41
-[; ;Prin2.c: 41:         PIR1bits.SSPIF = 0;
+"40
+[; ;Prin2.c: 40:         PIR1bits.SSPIF = 0;
 [e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 141  ]
 {
-"43
-[; ;Prin2.c: 43: }
+"42
+[; ;Prin2.c: 42: }
 [e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
-"45
-[; ;Prin2.c: 45:     ADCinit();
+"44
+[; ;Prin2.c: 44:     ADCinit();
 [e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 142  ]
 {
-"46
-[; ;Prin2.c: 46:     I2C_Slave_Init(0x60);
+"45
+[; ;Prin2.c: 45:     I2C_Slave_Init(0x70);
 [e = _z _SSPBUF ]
-"47
-[; ;Prin2.c: 47:     while(1){
+"46
+[; ;Prin2.c: 46:     while(1){
 [e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
-"48
-[; ;Prin2.c: 48:         if (valor >= 51){
+"47
+[; ;Prin2.c: 47:         if (recibido ==1){
 [e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
-"49
-[; ;Prin2.c: 49:             valor1=1;
+"48
+[; ;Prin2.c: 48: 
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
-"50
-[; ;Prin2.c: 50:         }
+"49
+[; ;Prin2.c: 49:         }
 }
 [e :U 142 ]
-"52
-[; ;Prin2.c: 52:     }
+"51
+[; ;Prin2.c: 51: }
 [e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 143  ]
 {
-"54
+"53
 [e = _z _SSPBUF ]
-"56
+"55
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"57
+"56
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
-"58
+"57
 [e $U 144  ]
 [e :U 145 ]
 [e :U 144 ]
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 145  ]
 [e :U 146 ]
-"59
+"58
 [e = _recibido _SSPBUF ]
-"60
+"59
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"62
+"61
 }
 [e $U 147  ]
 [e :U 143 ]
 [e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i != -> . . _SSPSTATbits 0 2 `i -> 0 `i 148  ]
 {
-"63
+"62
 [e = _z _SSPBUF ]
-"64
+"63
 [e = _BF -> -> 0 `i `b ]
+"64
+[e = _SSPBUF -> _valor `uc ]
 "65
-[e = _SSPBUF -> _valor1 `uc ]
-"66
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
-"67
+"66
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"68
+"67
 [e $U 149  ]
 [e :U 150 ]
 [e :U 149 ]
 [e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 150  ]
 [e :U 151 ]
-"69
+"68
 }
 [e :U 148 ]
 [e :U 147 ]
-"71
+"70
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"72
+"71
 }
 [e :U 141 ]
-"73
+"72
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"74
+"73
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"75
+"74
 [e ( _ADCinit ..  ]
+"75
+[e ( _I2C_Slave_Init (1 -> -> 112 `i `uc ]
 "76
-[e ( _I2C_Slave_Init (1 -> -> 96 `i `uc ]
-"77
 [e :U 154 ]
 {
-"78
-[e $ ! >= _valor -> 51 `i 156  ]
+"77
+[e $ ! == -> _recibido `i -> 1 `i 156  ]
 {
 "79
-[e = _valor1 -> 1 `i ]
-"80
 }
 [e :U 156 ]
-"81
-[e = _valor1 -> 0 `i ]
-"82
+"80
 }
 [e :U 153 ]
 [e $U 154  ]
 [e :U 155 ]
-"83
+"81
 [e :UE 152 ]
 }

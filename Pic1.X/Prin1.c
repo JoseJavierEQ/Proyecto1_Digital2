@@ -1,11 +1,11 @@
 /*
  * File:   Prin1.c
  * Author: José Javier Estrada
- *
+ * Esclavo 1 controla fotoresistencia y activa el servomotor. Con I2C
  * Created on February 29, 2020, 8:12 PM
  */
 
-#include<pic16f887.h>              //----Include Reg file of Pic18f4550
+#include<pic16f887.h>             
 #include "ADC.h"
 #include "I2C.h"
 #include <stdint.h>
@@ -73,11 +73,15 @@ void __interrupt() ISR(void){
 }
 void main(void) {
     ADCinit();
-    I2C_Slave_Init(0x60);
+    I2C_Slave_Init(0x50);
     while(1){
-        if (valor >= 51){   //Valor minimo de luz antes de mandar el 1
+        if (valor <= 20){   //Valor minimo de luz antes de mandar el 1
             valor1=1;       //Enviamos un 1 Para encender las Luces
+        }else{
+            valor1=0;
         }
-        valor1=0;
+        if (recibido ==1){
+            // COLOCAR AQUI RUTINA SERVO 
+        }
     }
 }

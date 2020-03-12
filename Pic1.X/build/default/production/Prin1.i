@@ -2856,11 +2856,15 @@ void __attribute__((picinterrupt(""))) ISR(void){
 }
 void main(void) {
     ADCinit();
-    I2C_Slave_Init(0x60);
+    I2C_Slave_Init(0x50);
     while(1){
-        if (valor >= 51){
+        if (valor <= 20){
             valor1=1;
+        }else{
+            valor1=0;
         }
-        valor1=0;
+        if (recibido ==1){
+
+        }
     }
 }

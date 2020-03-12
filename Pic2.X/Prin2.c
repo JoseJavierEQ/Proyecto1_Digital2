@@ -1,7 +1,7 @@
 /*
  * File:   Prin1.c
  * Author: José Javier Estrada
- *
+ * Esclavo 2 lee el sensor de lluvia y activa el stepper.
  * Created on February 29, 2020, 8:22 PM
  */
 
@@ -28,7 +28,6 @@
 #pragma config WRT = OFF   
 
 int valor = 0;
-int valor1 = 0;
 uint8_t z;
 uint8_t recibido;
 
@@ -62,7 +61,7 @@ void __interrupt() ISR(void){
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){//leer
             z = SSPBUF;
             BF = 0;
-            SSPBUF = valor1;
+            SSPBUF = valor;
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
@@ -73,11 +72,10 @@ void __interrupt() ISR(void){
 }
 void main(void) {
     ADCinit();
-    I2C_Slave_Init(0x60);
+    I2C_Slave_Init(0x70);
     while(1){
-        if (valor >= 51){   //Valor minimo de luz antes de mandar el 1
-            valor1=1;       //Enviamos un 1 Para encender las Luces
+        if (recibido ==1){
+            // COLOCAR AQUI RUTINA STEPPER
         }
-        valor1=0;
     }
 }

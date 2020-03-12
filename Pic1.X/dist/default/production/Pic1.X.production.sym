@@ -62,7 +62,7 @@ stacklo 0 0 ABS 0
 saved_w 7E 0 ABS 0
 __Hinit C 0 CODE 0
 __Linit C 0 CODE 0
-__end_of_main B7 0 CODE 0
+__end_of_main BA 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 I2C_Slave_Init@address 7A 0 COMMON 1
@@ -86,10 +86,10 @@ ___latbits 2 0 ABS 0
 __Hpowerup 0 0 CODE 0
 _SSPSTAT 94 0 ABS 0
 __Lpowerup 0 0 CODE 0
-__end_of_I2C_Slave_Init D1 0 CODE 0
+__end_of_I2C_Slave_Init D4 0 CODE 0
 _SSPCON2bits 91 0 ABS 0
-__ptext1 B7 0 CODE 0
-__ptext2 D1 0 CODE 0
+__ptext1 BA 0 CODE 0
+__ptext2 D4 0 CODE 0
 __ptext3 19 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -103,7 +103,7 @@ __Hspace_0 2009 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __Hspace_1 7B 0 ABS 0
 __Lspace_1 0 0 ABS 0
-_ADCinit D1 0 CODE 0
+_ADCinit D4 0 CODE 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hcinit 19 0 CODE 0
@@ -129,7 +129,7 @@ __Lreset_vec 0 0 CODE 0
 intlevel0 0 0 ENTRY 0
 __CFG_WDTE$OFF 0 0 ABS 0
 intlevel1 0 0 ENTRY 0
-_I2C_Slave_Init B7 0 CODE 0
+_I2C_Slave_Init BA 0 CODE 0
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0
 intlevel2 0 0 ENTRY 0
 intlevel3 0 0 ENTRY 0
@@ -146,16 +146,16 @@ __CFG_IESO$OFF 0 0 ABS 0
 __pmaintext 92 0 CODE 0
 __initialization F 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
-__end_of_ADCinit E6 0 CODE 0
+__end_of_ADCinit E9 0 CODE 0
 __CFG_LVP$OFF 0 0 ABS 0
 %segments
 reset_vec 0 5 CODE 0 0
-intentry 8 1CB CODE 8 0
+intentry 8 1D1 CODE 8 0
 config 400E 4011 CONFIG 400E 0
 bssCOMMON 70 7A COMMON 70 1
 %locals
 dist/default/production\Pic1.X.production.o
-C:\Users\JOSJAV~1\AppData\Local\Temp\sf7o.
+C:\Users\JOSJAV~1\AppData\Local\Temp\s548.
 797 F 0 CODE 0
 800 F 0 CODE 0
 820 F 0 CODE 0
@@ -174,40 +174,43 @@ Prin1.c
 77 9E 0 CODE 0
 78 9E 0 CODE 0
 79 AB 0 CODE 0
-80 B0 0 CODE 0
+80 AF 0 CODE 0
 81 B0 0 CODE 0
 82 B3 0 CODE 0
 83 B4 0 CODE 0
+85 B5 0 CODE 0
+86 B6 0 CODE 0
+87 B7 0 CODE 0
 I2C.c
-94 B7 0 CODE 0
-96 B8 0 CODE 0
-97 BC 0 CODE 0
-98 C0 0 CODE 0
-99 C4 0 CODE 0
-100 C6 0 CODE 0
-101 C7 0 CODE 0
-102 C8 0 CODE 0
-103 C9 0 CODE 0
-104 CA 0 CODE 0
-105 CD 0 CODE 0
-106 D0 0 CODE 0
+94 BA 0 CODE 0
+96 BB 0 CODE 0
+97 BF 0 CODE 0
+98 C3 0 CODE 0
+99 C7 0 CODE 0
+100 C9 0 CODE 0
+101 CA 0 CODE 0
+102 CB 0 CODE 0
+103 CC 0 CODE 0
+104 CD 0 CODE 0
+105 D0 0 CODE 0
+106 D3 0 CODE 0
 ADC.c
-14 D1 0 CODE 0
-15 D1 0 CODE 0
-16 D4 0 CODE 0
-17 D5 0 CODE 0
-18 D6 0 CODE 0
-19 D9 0 CODE 0
-20 DA 0 CODE 0
-21 DB 0 CODE 0
-22 DC 0 CODE 0
-23 DD 0 CODE 0
-24 DE 0 CODE 0
-25 E1 0 CODE 0
-26 E2 0 CODE 0
-27 E3 0 CODE 0
-28 E4 0 CODE 0
-29 E5 0 CODE 0
+14 D4 0 CODE 0
+15 D4 0 CODE 0
+16 D7 0 CODE 0
+17 D8 0 CODE 0
+18 D9 0 CODE 0
+19 DC 0 CODE 0
+20 DD 0 CODE 0
+21 DE 0 CODE 0
+22 DF 0 CODE 0
+23 E0 0 CODE 0
+24 E1 0 CODE 0
+25 E4 0 CODE 0
+26 E5 0 CODE 0
+27 E6 0 CODE 0
+28 E7 0 CODE 0
+29 E8 0 CODE 0
 Prin1.c
 35 19 0 CODE 0
 36 19 0 CODE 0

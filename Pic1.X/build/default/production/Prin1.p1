@@ -434,30 +434,33 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 142  ]
 {
 "46
-[; ;Prin1.c: 46:     I2C_Slave_Init(0x60);
+[; ;Prin1.c: 46:     I2C_Slave_Init(0x50);
 [e = _z _SSPBUF ]
 "47
 [; ;Prin1.c: 47:     while(1){
 [e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
 "48
-[; ;Prin1.c: 48:         if (valor >= 51){
+[; ;Prin1.c: 48:         if (valor <= 20){
 [e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
 "49
 [; ;Prin1.c: 49:             valor1=1;
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "50
-[; ;Prin1.c: 50:         }
+[; ;Prin1.c: 50:         }else{
 }
 [e :U 142 ]
 "52
-[; ;Prin1.c: 52:     }
+[; ;Prin1.c: 52:         }
 [e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 143  ]
 {
 "54
+[; ;Prin1.c: 54: 
 [e = _z _SSPBUF ]
 "56
+[; ;Prin1.c: 56:     }
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "57
+[; ;Prin1.c: 57: }
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "58
 [e $U 144  ]
@@ -512,25 +515,36 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75
 [e ( _ADCinit ..  ]
 "76
-[e ( _I2C_Slave_Init (1 -> -> 96 `i `uc ]
+[e ( _I2C_Slave_Init (1 -> -> 80 `i `uc ]
 "77
 [e :U 154 ]
 {
 "78
-[e $ ! >= _valor -> 51 `i 156  ]
+[e $ ! <= _valor -> 20 `i 156  ]
 {
 "79
 [e = _valor1 -> 1 `i ]
 "80
 }
+[e $U 157  ]
 [e :U 156 ]
+{
 "81
 [e = _valor1 -> 0 `i ]
 "82
 }
+[e :U 157 ]
+"83
+[e $ ! == -> _recibido `i -> 1 `i 158  ]
+{
+"85
+}
+[e :U 158 ]
+"86
+}
 [e :U 153 ]
 [e $U 154  ]
 [e :U 155 ]
-"83
+"87
 [e :UE 152 ]
 }

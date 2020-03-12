@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Pic1.X.production.sym \
   --cmf=dist/default/production\Pic1.X.production.cmf -z -Q16F887 \
-  -oC:\Users\JOSJAV~1\AppData\Local\Temp\sf7o.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\JOSJAV~1\AppData\Local\Temp\s548.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Pic1.X.production.map -E1 -ver=XC8 --acfsm=1493 \
   -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\JOSJAV~1\AppData\Local\Temp\sf7o.o \
+  -DENTRY=2 -k C:\Users\JOSJAV~1\AppData\Local\Temp\s548.o \
   dist/default/production\Pic1.X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\JOSJAV~1\AppData\Local\Temp\sf7o.o
+C:\Users\JOSJAV~1\AppData\Local\Temp\s548.o
                 end_init                              C        C        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -36,9 +36,9 @@ dist/default/production\Pic1.X.production.o
                 cinit                                 F        F        A        8       0
                 intentry                              4        4        8        8       0
                 text3                                19       19       79        8       0
-                text2                                D1       D1       15        8       0
-                text1                                B7       B7       1A        8       0
-                maintext                             92       92       25        8       0
+                text2                                D4       D4       15        8       0
+                text1                                BA       BA       1A        8       0
+                maintext                             92       92       28        8       0
                 cstackCOMMON                         76       76        5       70       1
                 bssCOMMON                            70       70        6       70       1
 
@@ -51,9 +51,9 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intentry                              4        4        8         0
                 reset_vec                             0        0        3         0
                 text3                                19       19       79         0
-                text2                                D1       D1       15         0
-                text1                                B7       B7       1A         0
-                maintext                             92       92       25         0
+                text2                                D4       D4       15         0
+                text1                                BA       BA       1A         0
+                maintext                             92       92       28         0
 
         CLASS   STRCODE        
 
@@ -100,7 +100,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  0000E2  0000E6         8       0  CODE        2
+                intentry                       000004  0000E5  0000E9         8       0  CODE        2
                 bssCOMMON                      000070  00000B  00007B        70       1  COMMON      1
                 config                         002007  000002  002009      400E       0  CONFIG      2
 
@@ -113,13 +113,13 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         00E6-1FFF            800
+                         00E9-1FFF            800
         COMMON           007B-007D              3           1
         CONST            0003-0003              1           2
-                         00E6-1FFF            100
+                         00E9-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         00E6-1FFF            100
+                         00E9-1FFF            100
         IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
@@ -131,21 +131,21 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         00E6-1FFF           1F1A
+                         00E9-1FFF           1F17
         STRING           0003-0003              1           2
-                         00E6-1FFF            100
+                         00E9-1FFF            100
 
                                   Symbol Table
 
 I2C_Slave_Init@address    cstackCOMMON 007A
 _ADCON0bits               (abs)        001F
 _ADCON1bits               (abs)        009F
-_ADCinit                  text2        00D1
+_ADCinit                  text2        00D4
 _ADIF                     (abs)        0066
 _ADRESH                   (abs)        001E
 _BF                       (abs)        04A0
 _GIE                      (abs)        005F
-_I2C_Slave_Init           text1        00B7
+_I2C_Slave_Init           text1        00BA
 _INTCONbits               (abs)        000B
 _ISR                      text3        0019
 _PEIE                     (abs)        005E
@@ -249,18 +249,18 @@ __S3                      (abs)        0000
 ___int_sp                 stack        0000
 ___latbits                (abs)        0002
 ___sp                     stack        0000
-__end_of_ADCinit          text2        00E6
-__end_of_I2C_Slave_Init   text1        00D1
+__end_of_ADCinit          text2        00E9
+__end_of_I2C_Slave_Init   text1        00D4
 __end_of_ISR              text3        0092
 __end_of__initialization  cinit        0015
-__end_of_main             maintext     00B7
+__end_of_main             maintext     00BA
 __initialization          cinit        000F
 __pbssCOMMON              bssCOMMON    0070
 __pcstackCOMMON           cstackCOMMON 0076
 __pintentry               intentry     0004
 __pmaintext               maintext     0092
-__ptext1                  text1        00B7
-__ptext2                  text2        00D1
+__ptext1                  text1        00BA
+__ptext2                  text2        00D4
 __ptext3                  text3        0019
 __size_of_ADCinit         (abs)        0000
 __size_of_I2C_Slave_Init  (abs)        0000
@@ -415,15 +415,15 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 I2C.c
-		_I2C_Slave_Init		CODE           	00B7	0000	27
+		_I2C_Slave_Init		CODE           	00BA	0000	27
 
 I2C.c estimated size: 27
 
 Prin1.c
 		_ISR           		CODE           	0019	0000	122
-		_main          		CODE           	0092	0000	38
+		_main          		CODE           	0092	0000	41
 
-Prin1.c estimated size: 160
+Prin1.c estimated size: 163
 
 shared
 		__initialization		CODE           	000F	0000	7
@@ -431,7 +431,7 @@ shared
 shared estimated size: 7
 
 ADC.c
-		_ADCinit       		CODE           	00D1	0000	22
+		_ADCinit       		CODE           	00D4	0000	22
 
 ADC.c estimated size: 22
 

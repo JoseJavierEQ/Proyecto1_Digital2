@@ -1,0 +1,576 @@
+Microchip MPLAB XC8 Compiler V2.00 ()
+
+Linker command line:
+
+-W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.00\pic\dat\en_msgs.txt \
+  -cs -h+dist/default/production\Rasp.X.production.sym \
+  --cmf=dist/default/production\Rasp.X.production.cmf -z -Q16F887 \
+  -oC:\Users\JOSJAV~1\AppData\Local\Temp\somo.2 --defsym=__MPLAB_BUILD=1 \
+  -Mdist/default/production/Rasp.X.production.map -E1 -ver=XC8 --acfsm=1493 \
+  -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
+  -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
+  -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
+  -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
+  -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
+  -DENTRY=2 -k C:\Users\JOSJAV~1\AppData\Local\Temp\somo.o \
+  dist/default/production\Rasp.X.production.o 
+
+Object code version is 3.11
+
+Machine type is 16F887
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\JOSJAV~1\AppData\Local\Temp\somo.o
+                end_init                              C        C        3        8       0
+                reset_vec                             0        0        3        0       0
+                config                             2007     2007        2     400E       0
+dist/default/production\Rasp.X.production.o
+                cinit                                 F        F       1A        8       0
+                intentry                              4        4        8        8       0
+                text6                               14A      14A        9        8       0
+                text5                               140      140        A        8       0
+                text4                               153      153        6        8       0
+                text3                                B9       B9       54        8       0
+                text2                               12C      12C       14        8       0
+                text1                               10D      10D       1F        8       0
+                maintext                             29       29       90        8       0
+                cstackBANK0                          28       28        6       20       1
+                cstackCOMMON                         70       70        5       70       1
+                bssBANK0                             20       20        8       20       1
+                dataCOMMON                           77       77        2       70       1
+                bssCOMMON                            75       75        2       70       1
+                idataCOMMON                         159      159        2        8       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   STACK          
+
+        CLASS   CODE           
+                end_init                              C        C        3         0
+                cinit                                 F        F       1A         0
+                intentry                              4        4        8         0
+                reset_vec                             0        0        3         0
+                text6                               14A      14A        9         0
+                text5                               140      140        A         0
+                text4                               153      153        6         0
+                text3                                B9       B9       54         0
+                text2                               12C      12C       14         0
+                text1                               10D      10D       1F         0
+                maintext                             29       29       90         0
+                idataCOMMON                         159      159        2         0
+
+        CLASS   STRCODE        
+
+        CLASS   STRING         
+
+        CLASS   CONST          
+
+        CLASS   ENTRY          
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        5         1
+                dataCOMMON                           77       77        2         1
+                bssCOMMON                            75       75        2         1
+
+        CLASS   BANK0          
+                cstackBANK0                          28       28        6         1
+                bssBANK0                             20       20        8         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+                config                             2007     2007        2         0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                intentry                       000004  000157  00015B         8       0  CODE        2
+                bssBANK0                       000020  00000E  00002E        20       1  BANK0       1
+                cstackCOMMON                   000070  000009  000079        70       1  COMMON      1
+                config                         002007  000002  002009      400E       0  CONFIG      2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            002E-006F             42           1
+        BANK1            00A0-00EF             50           1
+        BANK2            0110-016F             60           1
+        BANK3            0190-01EF             60           1
+        CODE             0003-0003              1           2
+                         015B-1FFF            800
+        COMMON           0079-007D              5           1
+        CONST            0003-0003              1           2
+                         015B-1FFF            100
+        EEDATA           2100-21FF            100           2
+        ENTRY            0003-0003              1           2
+                         015B-1FFF            100
+        IDLOC            2000-2003              4           2
+        RAM              002E-006F             42           1
+                         00A0-00EF             50
+                         0110-016F             60
+                         0190-01EF             60
+        SFR0             0000-001F             20           1
+        SFR1             0080-009F             20           1
+        SFR2             0100-010F             10           1
+        SFR3             0180-018F             10           1
+        STACK            0110-016F             60           1
+        STRCODE          0003-0003              1           2
+                         015B-1FFF           1EA5
+        STRING           0003-0003              1           2
+                         015B-1FFF            100
+
+                                  Symbol Table
+
+_ANSEL                    (abs)        0188
+_BAUDCTLbits              (abs)        0187
+_INTCONbits               (abs)        000B
+_PIE1bits                 (abs)        008C
+_PIR1bits                 (abs)        000C
+_RCIF                     (abs)        0065
+_RCREG                    (abs)        001A
+_RCSTAbits                (abs)        0018
+_SPBRG                    (abs)        0099
+_SPBRGH                   (abs)        009A
+_SSPBUF                   (abs)        0013
+_SSPCON                   (abs)        0014
+_SSPIF                    (abs)        0063
+_SSPSTAT                  (abs)        0094
+_SSPSTATbits              (abs)        0094
+_TRISA                    (abs)        0085
+_TRISAbits                (abs)        0085
+_TRISC3                   (abs)        043B
+_TRISC5                   (abs)        043D
+_TXREG                    (abs)        0019
+_TXSTAbits                (abs)        0098
+__CFG_BOR4V$BOR40V        (abs)        0000
+__CFG_BOREN$OFF           (abs)        0000
+__CFG_CP$OFF              (abs)        0000
+__CFG_CPD$OFF             (abs)        0000
+__CFG_FCMEN$OFF           (abs)        0000
+__CFG_FOSC$INTRC_NOCLKOUT (abs)        0000
+__CFG_IESO$OFF            (abs)        0000
+__CFG_LVP$OFF             (abs)        0000
+__CFG_MCLRE$OFF           (abs)        0000
+__CFG_PWRTE$OFF           (abs)        0000
+__CFG_WDTE$OFF            (abs)        0000
+__CFG_WRT$OFF             (abs)        0000
+__Habs1                   abs1         0000
+__Hbank0                  bank0        0000
+__Hbank1                  bank1        0000
+__Hbank2                  bank2        0000
+__Hbank3                  bank3        0000
+__HbssBANK0               bssBANK0     0000
+__HbssCOMMON              bssCOMMON    0000
+__Hcinit                  cinit        0029
+__Hclrtext                clrtext      0000
+__Hcode                   code         0000
+__Hcommon                 common       0000
+__Hconfig                 config       2009
+__HcstackBANK0            cstackBANK0  0000
+__HcstackCOMMON           cstackCOMMON 0000
+__HdataCOMMON             dataCOMMON   0000
+__Heeprom_data            eeprom_data  0000
+__Hend_init               end_init     000F
+__Hfunctab                functab      0000
+__HidataCOMMON            idataCOMMON  0000
+__Hidloc                  idloc        0000
+__Hinit                   init         000C
+__Hintentry               intentry     000C
+__Hmaintext               maintext     0000
+__Hpowerup                powerup      0000
+__Hram                    ram          0000
+__Hreset_vec              reset_vec    0003
+__Hsfr0                   sfr0         0000
+__Hsfr1                   sfr1         0000
+__Hsfr2                   sfr2         0000
+__Hsfr3                   sfr3         0000
+__Hspace_0                (abs)        2009
+__Hspace_1                (abs)        0079
+__Hspace_2                (abs)        0000
+__Hspace_3                (abs)        0000
+__Hstack                  stack        0000
+__Hstrings                strings      0000
+__Htext                   text         0000
+__Labs1                   abs1         0000
+__Lbank0                  bank0        0000
+__Lbank1                  bank1        0000
+__Lbank2                  bank2        0000
+__Lbank3                  bank3        0000
+__LbssBANK0               bssBANK0     0000
+__LbssCOMMON              bssCOMMON    0000
+__Lcinit                  cinit        000F
+__Lclrtext                clrtext      0000
+__Lcode                   code         0000
+__Lcommon                 common       0000
+__Lconfig                 config       2007
+__LcstackBANK0            cstackBANK0  0000
+__LcstackCOMMON           cstackCOMMON 0000
+__LdataCOMMON             dataCOMMON   0000
+__Leeprom_data            eeprom_data  0000
+__Lend_init               end_init     000C
+__Lfunctab                functab      0000
+__LidataCOMMON            idataCOMMON  0000
+__Lidloc                  idloc        0000
+__Linit                   init         000C
+__Lintentry               intentry     0004
+__Lmaintext               maintext     0000
+__Lpowerup                powerup      0000
+__Lram                    ram          0000
+__Lreset_vec              reset_vec    0000
+__Lsfr0                   sfr0         0000
+__Lsfr1                   sfr1         0000
+__Lsfr2                   sfr2         0000
+__Lsfr3                   sfr3         0000
+__Lspace_0                (abs)        0000
+__Lspace_1                (abs)        0000
+__Lspace_2                (abs)        0000
+__Lspace_3                (abs)        0000
+__Lstack                  stack        0000
+__Lstrings                strings      0000
+__Ltext                   text         0000
+__S0                      (abs)        2009
+__S1                      (abs)        0079
+__S2                      (abs)        0000
+__S3                      (abs)        0000
+___int_sp                 stack        0000
+___latbits                (abs)        0002
+___sp                     stack        0000
+__end_of__initialization  cinit        0025
+__end_of_config           text2        0140
+__end_of_isr              text3        010D
+__end_of_main             maintext     00B9
+__end_of_spiInit          text1        012C
+__end_of_spiRead          text5        014A
+__end_of_spiReceiveWait   text6        0153
+__end_of_spiWrite         text4        0159
+__initialization          cinit        000F
+__pbssBANK0               bssBANK0     0020
+__pbssCOMMON              bssCOMMON    0075
+__pcstackBANK0            cstackBANK0  0028
+__pcstackCOMMON           cstackCOMMON 0070
+__pdataCOMMON             dataCOMMON   0077
+__pidataCOMMON            idataCOMMON  0159
+__pintentry               intentry     0004
+__pmaintext               maintext     0029
+__ptext1                  text1        010D
+__ptext2                  text2        012C
+__ptext3                  text3        00B9
+__ptext4                  text4        0153
+__ptext5                  text5        0140
+__ptext6                  text6        014A
+__size_of_config          (abs)        0000
+__size_of_isr             (abs)        0000
+__size_of_main            (abs)        0000
+__size_of_spiInit         (abs)        0000
+__size_of_spiRead         (abs)        0000
+__size_of_spiReceiveWait  (abs)        0000
+__size_of_spiWrite        (abs)        0000
+_config                   text2        012C
+_contador                 bssBANK0     0020
+_isr                      text3        00B9
+_lectura                  dataCOMMON   0077
+_main                     maintext     0029
+_spiInit                  text1        010D
+_spiRead                  text5        0140
+_spiReceiveWait           text6        014A
+_spiWrite                 text4        0153
+_valor1                   bssCOMMON    0075
+_valor2                   bssBANK0     0026
+_valor3                   bssBANK0     0024
+_valor4                   bssBANK0     0022
+btemp                     (abs)        007E
+end_of_initialization     cinit        0025
+interrupt_function        intentry     0004
+intlevel0                 functab      0000
+intlevel1                 functab      0000
+intlevel2                 functab      0000
+intlevel3                 functab      0000
+intlevel4                 functab      0000
+intlevel5                 functab      0000
+reset_vec                 reset_vec    0000
+saved_w                   (abs)        007E
+spiInit@sClockIdle        cstackBANK0  0029
+spiInit@sDataSample       cstackBANK0  0028
+spiInit@sTransmitEdge     cstackBANK0  002A
+spiInit@sType             cstackBANK0  002B
+spiWrite@dat              cstackCOMMON 0070
+stackhi                   (abs)        0000
+stacklo                   (abs)        0000
+start                     init         000C
+start_initialization      cinit        000F
+wtemp0                    (abs)        007E
+
+
+FUNCTION INFORMATION:
+
+ *************** function _main *****************
+ Defined at:
+		line 49 in file "Prinrasp.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       2       0       0       0
+      Totals:         0       2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels required when called:    4
+ This function calls:
+		_config
+		_spiInit
+ This function is called by:
+		Startup code after reset
+ This function uses a non-reentrant model
+
+
+ *************** function _spiInit *****************
+ Defined at:
+		line 12 in file "SPI.c"
+ Parameters:    Size  Location     Type
+  sType           1    wreg     enum E1264
+  sDataSample     1    0[BANK0 ] enum E1272
+  sClockIdle      1    1[BANK0 ] enum E1276
+  sTransmitEdg    1    2[BANK0 ] enum E1280
+ Auto vars:     Size  Location     Type
+  sType           1    3[BANK0 ] enum E1264
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       3       0       0       0
+      Locals:         0       1       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       4       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _config *****************
+ Defined at:
+		line 12 in file "USART1.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _isr *****************
+ Defined at:
+		line 33 in file "Prinrasp.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          4       0       0       0       0
+      Totals:         4       0       0       0       0
+Total ram usage:        4 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_spiRead
+		_spiWrite
+ This function is called by:
+		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function _spiWrite *****************
+ Defined at:
+		line 34 in file "SPI.c"
+ Parameters:    Size  Location     Type
+  dat             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  dat             1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         1       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         1       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _spiRead *****************
+ Defined at:
+		line 47 in file "SPI.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_spiReceiveWait
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _spiReceiveWait *****************
+ Defined at:
+		line 29 in file "SPI.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+      Params:         0       0       0       0       0
+      Locals:         0       0       0       0       0
+      Temps:          0       0       0       0       0
+      Totals:         0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_spiRead
+ This function uses a non-reentrant model
+
+
+
+MODULE INFORMATION
+
+Module		Function		Class		Link	Load	Size
+USART1.c
+		_config        		CODE           	012C	0000	21
+
+USART1.c estimated size: 21
+
+Prinrasp.c
+		_main          		CODE           	0029	0000	145
+		_isr           		CODE           	00B9	0000	85
+
+Prinrasp.c estimated size: 230
+
+shared
+		__initialization		CODE           	000F	0000	23
+
+shared estimated size: 23
+
+SPI.c
+		_spiWrite      		CODE           	0153	0000	7
+		_spiInit       		CODE           	010D	0000	32
+		_spiReceiveWait		CODE           	014A	0000	10
+		_spiRead       		CODE           	0140	0000	11
+
+SPI.c estimated size: 60
+

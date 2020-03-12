@@ -2811,7 +2811,6 @@ extern int printf(const char *, ...);
 #pragma config WRT = OFF
 
 int valor = 0;
-int valor1 = 0;
 uint8_t z;
 uint8_t recibido;
 
@@ -2845,7 +2844,7 @@ void __attribute__((picinterrupt(""))) ISR(void){
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = valor1;
+            SSPBUF = valor;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((250)*(4000000/4000000.0)));
             while(SSPSTATbits.BF);
@@ -2856,11 +2855,10 @@ void __attribute__((picinterrupt(""))) ISR(void){
 }
 void main(void) {
     ADCinit();
-    I2C_Slave_Init(0x60);
+    I2C_Slave_Init(0x70);
     while(1){
-        if (valor >= 51){
-            valor1=1;
+        if (recibido ==1){
+
         }
-        valor1=0;
     }
 }
