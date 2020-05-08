@@ -1,0 +1,1 @@
+ build/default/production/Prin-Raspi.d  build/default/production/Prin-Raspi.p1:  Prin-Raspi.c SPI.h LCD.h USART1.h
