@@ -83,18 +83,20 @@
 [v _LCD_CHAR LCD_CHAR `(v  1 e 1 0 ]
 "98
 [v _LCD_STRING LCD_STRING `(v  1 e 1 0 ]
-"40 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
+"43 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
 [v _read_ds1307 read_ds1307 `(us  1 e 2 0 ]
-"51
+"54
 [v _BCD2UpperCh BCD2UpperCh `(uc  1 e 1 0 ]
-"56
+"59
 [v _BCD2LowerCh BCD2LowerCh `(uc  1 e 1 0 ]
-"77
+"80
 [v _main main `(v  1 e 1 0 ]
-"232
+"236
 [v _servo0 servo0 `(v  1 e 1 0 ]
-"243
+"247
 [v _servo180 servo180 `(v  1 e 1 0 ]
+"259
+[v _PasoCompSimple PasoCompSimple `(v  1 e 1 0 ]
 "12 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\USART1.c
 [v _config config `(v  1 e 1 0 ]
 "24
@@ -156,7 +158,7 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S574 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S580 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -166,18 +168,18 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "1068
-[s S583 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S589 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S587 . 1 `uc 1 . 1 0 :6:0 
+[s S593 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S590 . 1 `uc 1 . 1 0 :6:0 
+[s S596 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S593 . 1 `S574 1 . 1 0 `S583 1 . 1 0 `S587 1 . 1 0 `S590 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES593  1 e 1 @24 ]
+[u S599 . 1 `S580 1 . 1 0 `S589 1 . 1 0 `S593 1 . 1 0 `S596 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES599  1 e 1 @24 ]
 "1133
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1140
@@ -261,7 +263,7 @@
 ]
 [u S120 . 1 `S80 1 . 1 0 `S89 1 . 1 0 `S94 1 . 1 0 `S100 1 . 1 0 `S105 1 . 1 0 `S110 1 . 1 0 `S115 1 . 1 0 ]
 [v _SSPSTATbits SSPSTATbits `VES120  1 e 1 @148 ]
-[s S514 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S520 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -271,20 +273,20 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2582
-[s S523 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S529 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S527 . 1 `uc 1 . 1 0 :6:0 
+[s S533 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S530 . 1 `S514 1 . 1 0 `S523 1 . 1 0 `S527 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES530  1 e 1 @152 ]
+[u S536 . 1 `S520 1 . 1 0 `S529 1 . 1 0 `S533 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES536  1 e 1 @152 ]
 "2642
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2704
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
-[s S551 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S557 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -294,8 +296,8 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3352
-[u S560 . 1 `S551 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES560  1 e 1 @391 ]
+[u S566 . 1 `S557 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES566  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -330,7 +332,7 @@
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "358 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"60 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
+"63 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
 [v _deter deter `i  1 e 2 0 ]
 [v _valor1 valor1 `i  1 e 2 0 ]
 [v _valor2 valor2 `i  1 e 2 0 ]
@@ -338,34 +340,36 @@
 [v _valor4 valor4 `i  1 e 2 0 ]
 [v _valor5 valor5 `i  1 e 2 0 ]
 [v _var var `i  1 e 2 0 ]
-"61
-[v _valor valor `[16]uc  1 e 16 0 ]
-"62
-[v _valorf valorf `[1]uc  1 e 1 0 ]
-"63
-[v _second second `i  1 e 2 0 ]
 "64
-[v _minute minute `i  1 e 2 0 ]
+[v _valor valor `[16]uc  1 e 16 0 ]
 "65
-[v _hour hour `i  1 e 2 0 ]
+[v _valorf valorf `[1]uc  1 e 1 0 ]
 "66
-[v _hr hr `i  1 e 2 0 ]
+[v _second second `i  1 e 2 0 ]
 "67
-[v _day day `i  1 e 2 0 ]
+[v _minute minute `i  1 e 2 0 ]
+"68
+[v _hour hour `i  1 e 2 0 ]
 "69
-[v _month month `i  1 e 2 0 ]
+[v _hr hr `i  1 e 2 0 ]
 "70
+[v _day day `i  1 e 2 0 ]
+"72
+[v _month month `i  1 e 2 0 ]
+"73
 [v _year year `i  1 e 2 0 ]
-"71
-[v _ap ap `i  1 e 2 0 ]
 "74
-[v _time time `[12]uc  1 e 12 0 ]
-"75
-[v _date date `[9]uc  1 e 9 0 ]
+[v _ap ap `i  1 e 2 0 ]
 "77
+[v _time time `[12]uc  1 e 12 0 ]
+"78
+[v _date date `[9]uc  1 e 9 0 ]
+"80
 [v _main main `(v  1 e 1 0 ]
 {
-"230
+"227
+[v main@cont cont `i  1 a 2 23 ]
+"232
 } 0
 "500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -423,28 +427,28 @@
 [v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
 "51
 } 0
-"243 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
+"247 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
 [v _servo180 servo180 `(v  1 e 1 0 ]
 {
-"245
+"249
 [v servo180@i i `ui  1 a 2 2 ]
-"253
+"257
 } 0
-"232
+"236
 [v _servo0 servo0 `(v  1 e 1 0 ]
 {
-"234
+"238
 [v servo0@i i `ui  1 a 2 2 ]
-"242
+"246
 } 0
-"40
+"43
 [v _read_ds1307 read_ds1307 `(us  1 e 2 0 ]
 {
-"41
+"44
 [v read_ds1307@r_data r_data `us  1 a 2 8 ]
-"40
+"43
 [v read_ds1307@address address `us  1 p 2 6 ]
-"50
+"53
 } 0
 "70 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\I2C.c
 [v _I2C_Master_Write I2C_Master_Write `(v  1 e 1 0 ]
@@ -558,6 +562,11 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
+"259 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
+[v _PasoCompSimple PasoCompSimple `(v  1 e 1 0 ]
+{
+"283
+} 0
 "98 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\LCD.c
 [v _LCD_STRING LCD_STRING `(v  1 e 1 0 ]
 {
@@ -610,21 +619,21 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"51 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
+"54 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Master.X\Pri-Master.c
 [v _BCD2UpperCh BCD2UpperCh `(uc  1 e 1 0 ]
 {
 [v BCD2UpperCh@bcd bcd `uc  1 a 1 wreg ]
 [v BCD2UpperCh@bcd bcd `uc  1 a 1 wreg ]
-"53
-[v BCD2UpperCh@bcd bcd `uc  1 a 1 1 ]
-"54
-} 0
 "56
+[v BCD2UpperCh@bcd bcd `uc  1 a 1 1 ]
+"57
+} 0
+"59
 [v _BCD2LowerCh BCD2LowerCh `(uc  1 e 1 0 ]
 {
 [v BCD2LowerCh@bcd bcd `uc  1 a 1 wreg ]
 [v BCD2LowerCh@bcd bcd `uc  1 a 1 wreg ]
-"58
+"61
 [v BCD2LowerCh@bcd bcd `uc  1 a 1 0 ]
-"59
+"62
 } 0

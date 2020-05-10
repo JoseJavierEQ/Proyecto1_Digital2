@@ -30,11 +30,14 @@
 #pragma config WRT = OFF   
 
 #define lcd PORTB                   //----Assing PORTD as lcd
-
+#define A PORTAbits.RA1
+#define B PORTAbits.RA3
+#define C PORTAbits.RA4
+#define D PORTAbits.RA5
 #define rs PORTDbits.RD5            //----Register Select Pin for Control of LCD
 #define rw PORTDbits.RD6            //----Read/Write Pin for Control of LCD
 #define en PORTDbits.RD7           //----Enable Pin for Control of LCD
-
+void PasoCompSimple(void);
 void servo0(void);
 void servo180(void) ;
 unsigned short read_ds1307(unsigned short address){
@@ -221,13 +224,14 @@ void main(void) {
 
         // Motor Stepper
         if (valor3 == 1){
-            PORTAbits.RA1 = 1;
-        }else{
-            PORTAbits.RA1 = 0;
-        }      
-  
+            for (int cont = 0; cont < 256; cont++){
+                PasoCompSimple(); 
+            }   
+        }
     }
 }
+
+// Funciones Motores
 
 void servo0(void) //0°
 {
@@ -250,4 +254,30 @@ void servo180(void) //180°
     PORTAbits.RA0 = 0;
     __delay_us(18000);
   }
+}
+
+void PasoCompSimple(void){
+    A = 1;
+    B = 0;
+    C = 0;
+    D = 0;
+    __delay_ms(15);  //paso 1
+    
+    A = 0;
+    B = 1;
+    C = 0;
+    D = 0;
+    __delay_ms(15);  // paso 2
+    
+    A = 0;
+    B = 0;
+    C = 1;
+    D = 0;
+    __delay_ms(15);  // paso 3
+    
+    A = 0;
+    B = 0;
+    C = 0;
+    D = 1;
+    __delay_ms(15);  //paso 4
 }

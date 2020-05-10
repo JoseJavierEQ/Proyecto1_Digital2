@@ -2951,13 +2951,8 @@ int DEC_2_BCD (int to_convert);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-
-
-
-
-
-
-
+# 40 "Pri-Master.c"
+void PasoCompSimple(void);
 void servo0(void);
 void servo180(void) ;
 unsigned short read_ds1307(unsigned short address){
@@ -3144,13 +3139,14 @@ void main(void) {
 
 
         if (valor3 == 1){
-            PORTAbits.RA1 = 1;
-        }else{
-            PORTAbits.RA1 = 0;
+            for (int cont = 0; cont < 256; cont++){
+                PasoCompSimple();
+            }
         }
-
     }
 }
+
+
 
 void servo0(void)
 {
@@ -3173,4 +3169,30 @@ void servo180(void)
     PORTAbits.RA0 = 0;
     _delay((unsigned long)((18000)*(4000000/4000000.0)));
   }
+}
+
+void PasoCompSimple(void){
+    PORTAbits.RA1 = 1;
+    PORTAbits.RA3 = 0;
+    PORTAbits.RA4 = 0;
+    PORTAbits.RA5 = 0;
+    _delay((unsigned long)((15)*(4000000/4000.0)));
+
+    PORTAbits.RA1 = 0;
+    PORTAbits.RA3 = 1;
+    PORTAbits.RA4 = 0;
+    PORTAbits.RA5 = 0;
+    _delay((unsigned long)((15)*(4000000/4000.0)));
+
+    PORTAbits.RA1 = 0;
+    PORTAbits.RA3 = 0;
+    PORTAbits.RA4 = 1;
+    PORTAbits.RA5 = 0;
+    _delay((unsigned long)((15)*(4000000/4000.0)));
+
+    PORTAbits.RA1 = 0;
+    PORTAbits.RA3 = 0;
+    PORTAbits.RA4 = 0;
+    PORTAbits.RA5 = 1;
+    _delay((unsigned long)((15)*(4000000/4000.0)));
 }

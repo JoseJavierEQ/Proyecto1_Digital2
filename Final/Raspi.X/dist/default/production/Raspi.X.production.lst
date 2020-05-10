@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V2.00 build -1524193055 
-                                                                                               Thu May 07 14:09:24 2020
+                                                                                               Sat May 09 20:19:19 2020
 
 Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 20180527130849
      1  0000                     
@@ -1191,7 +1191,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1128                           __CFG_BOR4V$BOR40V equ 0x0
   1129  0000                     global __CFG_WRT$OFF
   1130                           __CFG_WRT$OFF equ 0x0
-  1131  0000                     	file	"C:\Users\JOSJAV~1\AppData\Local\Temp\skvo."
+  1131  0000                     	file	"C:\Users\JOSJAV~1\AppData\Local\Temp\s3ns."
   1132                           	line	#
   1133                           psect cinit,class=CODE,delta=2
   1134                           global start_initialization
@@ -1262,7 +1262,7 @@ Microchip Technology Omniscient Code Generator v2.00 (Free mode) build 201805271
   1199  00A0                     _valor1:
   1200  00A0                            ds      16
   1201  00A0                     
-  1202                           	file	"C:\Users\JOSJAV~1\AppData\Local\Temp\skvo."
+  1202                           	file	"C:\Users\JOSJAV~1\AppData\Local\Temp\s3ns."
   1203                           	line	#
   1204                           psect clrtext,class=CODE,delta=2
   1205                           global clear_ram0
@@ -6517,7 +6517,7 @@ DATA                 0      0      6C      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.00 build -1524193055 
-Symbol Table                                                                                   Thu May 07 14:09:24 2020
+Symbol Table                                                                                   Sat May 09 20:19:19 2020
 
              LCD_CURSOR@a 004E               LCD_CURSOR@b 0050               LCD_CURSOR@d 0052  
                        _A 0074                         _B 0072                         _C 002E  
