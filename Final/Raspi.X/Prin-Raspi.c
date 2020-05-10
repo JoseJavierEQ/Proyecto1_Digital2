@@ -38,27 +38,27 @@ void __interrupt() isr(void){
    if(SSPIF == 1){
         lectura = spiRead();
         if (lectura == 1){
-            spiWrite(A*2);
+            spiWrite(A1);
         }else if(lectura == 2){
-            spiWrite(B*2);
+            spiWrite(B1);
         }else if(lectura == 3){
-            spiWrite(C*2);
+            spiWrite(C1);
         }else if(lectura == 4){
-            spiWrite(D*2);
+            spiWrite(D1);
         }else if (lectura== 5){
-            spiWrite(E*2); 
-        }else if (lectura== 6){
-            spiWrite(a*2); 
-        }else if (lectura== 7){
-            spiWrite(b*2); 
-        }else if (lectura== 8){
-            spiWrite(c*2); 
-        }else if (lectura== 9){
-            spiWrite(d*2); 
-        }else if (lectura== 10){
-            spiWrite(e*2); 
+            spiWrite(E1); 
+//        }else if (lectura== 6){
+//            spiWrite(a*2); 
+//        }else if (lectura== 7){
+//            spiWrite(b*2); 
+//        }else if (lectura== 8){
+//            spiWrite(c*2); 
+//        }else if (lectura== 9){
+//            spiWrite(d*2); 
+//        }else if (lectura== 10){
+//            spiWrite(e*2); 
         }else{
-            spiWrite(000);
+            spiWrite(255);
         }
         SSPIF = 0;
     }
@@ -100,13 +100,13 @@ void main(void) {
         while(!RCIF){
         }
         A1 = RCREG;
-        if(A1%2){
-            A = A1/2;
-            a = A+1;
-        } else{
-            A = A1/2;
-            a = A;
-        }
+//        if(A1%2){
+//            A = A1/2;
+//            a = A+1;
+//        } else{
+//            A = A1/2;
+//            a = A;
+//        }
         __delay_ms(100);
 
         // Valor 2 Ultrasonico
@@ -114,13 +114,13 @@ void main(void) {
         while(!RCIF){
         }
         B1 = RCREG;
-        if(B1%2){
-            B = B1/2;
-            b = B+1;
-        } else{
-            B = B1/2;
-            b = B;
-        }
+//        if(B1%2){
+//            B = B1/2;
+//            b = B+1;
+//        } else{
+//            B = B1/2;
+//            b = B;
+//        }
         __delay_ms(100);
         
         // Valor 3 Lluvia
@@ -128,13 +128,13 @@ void main(void) {
         while(!RCIF){
         }
         C1 = RCREG;
-        if(C1%2){
-            C = C1/2;
-            c = C+1;
-        } else{
-            C = C1/2;
-            c = C;
-        }
+//        if(C1%2){
+//            C = C1/2;
+//            c = C+1;
+//        } else{
+//            C = C1/2;
+//            c = C;
+//        }
         __delay_ms(100);
 //        
 //        // Valor 4 Seguidor de linea
@@ -142,13 +142,13 @@ void main(void) {
         while(!RCIF){
         }
         D1 = RCREG;
-        if(D1%2){
-            D = D1/2;
-            d = D+1;
-        } else{
-            D = D1/2;
-            d = D;
-        }
+//        if(D1%2){
+//            D = D1/2;
+//            d = D+1;
+//        } else{
+//            D = D1/2;
+//            d = D;
+//        }
         __delay_ms(100);
 //        
 //        // Valor 5 Tiempo
@@ -156,13 +156,13 @@ void main(void) {
         while(!RCIF){
         }
         E1 = RCREG;
-        if(E1%2){
-            E = E1/2;
-            e = E+1;
-        } else{
-            E = E1/2;
-            e = E;
-        }
+//        if(E1%2){
+//            E = E1/2;
+//            e = E+1;
+//        } else{
+//            E = E1/2;
+//            e = E;
+//        }
         __delay_ms(100);
     }
 }

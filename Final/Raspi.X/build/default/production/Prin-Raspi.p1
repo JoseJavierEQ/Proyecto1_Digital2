@@ -1805,9 +1805,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "40
 [e $ ! == _lectura -> 1 `i 145  ]
 {
-[; ;Prin-Raspi.c: 41: spiWrite(A*2);
+[; ;Prin-Raspi.c: 41: spiWrite(A1);
 "41
-[e ( _spiWrite (1 * _A -> 2 `i ]
+[e ( _spiWrite (1 _A1 ]
 "42
 }
 [; ;Prin-Raspi.c: 42: }else if(lectura == 2){
@@ -1815,9 +1815,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 145 ]
 [e $ ! == _lectura -> 2 `i 147  ]
 {
-[; ;Prin-Raspi.c: 43: spiWrite(B*2);
+[; ;Prin-Raspi.c: 43: spiWrite(B1);
 "43
-[e ( _spiWrite (1 * _B -> 2 `i ]
+[e ( _spiWrite (1 _B1 ]
 "44
 }
 [; ;Prin-Raspi.c: 44: }else if(lectura == 3){
@@ -1825,9 +1825,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 147 ]
 [e $ ! == _lectura -> 3 `i 149  ]
 {
-[; ;Prin-Raspi.c: 45: spiWrite(C*2);
+[; ;Prin-Raspi.c: 45: spiWrite(C1);
 "45
-[e ( _spiWrite (1 * _C -> 2 `i ]
+[e ( _spiWrite (1 _C1 ]
 "46
 }
 [; ;Prin-Raspi.c: 46: }else if(lectura == 4){
@@ -1835,9 +1835,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 149 ]
 [e $ ! == _lectura -> 4 `i 151  ]
 {
-[; ;Prin-Raspi.c: 47: spiWrite(D*2);
+[; ;Prin-Raspi.c: 47: spiWrite(D1);
 "47
-[e ( _spiWrite (1 * _D -> 2 `i ]
+[e ( _spiWrite (1 _D1 ]
 "48
 }
 [; ;Prin-Raspi.c: 48: }else if (lectura== 5){
@@ -1845,75 +1845,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 151 ]
 [e $ ! == _lectura -> 5 `i 153  ]
 {
-[; ;Prin-Raspi.c: 49: spiWrite(E*2);
+[; ;Prin-Raspi.c: 49: spiWrite(E1);
 "49
-[e ( _spiWrite (1 * _E -> 2 `i ]
-"50
-}
-[; ;Prin-Raspi.c: 50: }else if (lectura== 6){
-[e $U 154  ]
-[e :U 153 ]
-[e $ ! == _lectura -> 6 `i 155  ]
-{
-[; ;Prin-Raspi.c: 51: spiWrite(a*2);
-"51
-[e ( _spiWrite (1 * _a -> 2 `i ]
-"52
-}
-[; ;Prin-Raspi.c: 52: }else if (lectura== 7){
-[e $U 156  ]
-[e :U 155 ]
-[e $ ! == _lectura -> 7 `i 157  ]
-{
-[; ;Prin-Raspi.c: 53: spiWrite(b*2);
-"53
-[e ( _spiWrite (1 * _b -> 2 `i ]
-"54
-}
-[; ;Prin-Raspi.c: 54: }else if (lectura== 8){
-[e $U 158  ]
-[e :U 157 ]
-[e $ ! == _lectura -> 8 `i 159  ]
-{
-[; ;Prin-Raspi.c: 55: spiWrite(c*2);
-"55
-[e ( _spiWrite (1 * _c -> 2 `i ]
-"56
-}
-[; ;Prin-Raspi.c: 56: }else if (lectura== 9){
-[e $U 160  ]
-[e :U 159 ]
-[e $ ! == _lectura -> 9 `i 161  ]
-{
-[; ;Prin-Raspi.c: 57: spiWrite(d*2);
-"57
-[e ( _spiWrite (1 * _d -> 2 `i ]
-"58
-}
-[; ;Prin-Raspi.c: 58: }else if (lectura== 10){
-[e $U 162  ]
-[e :U 161 ]
-[e $ ! == _lectura -> 10 `i 163  ]
-{
-[; ;Prin-Raspi.c: 59: spiWrite(e*2);
-"59
-[e ( _spiWrite (1 * _e -> 2 `i ]
+[e ( _spiWrite (1 _E1 ]
 "60
 }
 [; ;Prin-Raspi.c: 60: }else{
-[e $U 164  ]
-[e :U 163 ]
+[e $U 154  ]
+[e :U 153 ]
 {
-[; ;Prin-Raspi.c: 61: spiWrite(000);
+[; ;Prin-Raspi.c: 61: spiWrite(255);
 "61
-[e ( _spiWrite (1 -> 0 `i ]
+[e ( _spiWrite (1 -> 255 `i ]
 "62
 }
-[e :U 164 ]
-[e :U 162 ]
-[e :U 160 ]
-[e :U 158 ]
-[e :U 156 ]
 [e :U 154 ]
 [e :U 152 ]
 [e :U 150 ]
@@ -2009,7 +1954,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _LCD_DATO (1 -> 1 `i ]
 [; ;Prin-Raspi.c: 91: while (1){ sprintf(valor1, "F Ll Dis Li  Sec");
 "91
-[e :U 167 ]
+[e :U 157 ]
 {
 [e ( _sprintf (1 , &U _valor1 :s 3C ]
 [; ;Prin-Raspi.c: 93: LCD_CURSOR(1,1);
@@ -2032,45 +1977,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mandar (1 -> 1 `i ]
 [; ;Prin-Raspi.c: 100: while(!RCIF){
 "100
-[e $U 169  ]
-[e :U 170 ]
+[e $U 159  ]
+[e :U 160 ]
 {
 "101
 }
-[e :U 169 ]
+[e :U 159 ]
 "100
-[e $ ! _RCIF 170  ]
-[e :U 171 ]
+[e $ ! _RCIF 160  ]
+[e :U 161 ]
 [; ;Prin-Raspi.c: 101: }
 [; ;Prin-Raspi.c: 102: A1 = RCREG;
 "102
 [e = _A1 -> _RCREG `i ]
-[; ;Prin-Raspi.c: 103: if(A1%2){
-"103
-[e $ ! != % _A1 -> 2 `i -> 0 `i 172  ]
-{
-[; ;Prin-Raspi.c: 104: A = A1/2;
-"104
-[e = _A / _A1 -> 2 `i ]
-[; ;Prin-Raspi.c: 105: a = A+1;
-"105
-[e = _a + _A -> 1 `i ]
-"106
-}
-[; ;Prin-Raspi.c: 106: } else{
-[e $U 173  ]
-[e :U 172 ]
-{
-[; ;Prin-Raspi.c: 107: A = A1/2;
-"107
-[e = _A / _A1 -> 2 `i ]
-[; ;Prin-Raspi.c: 108: a = A;
-"108
-[e = _a _A ]
-"109
-}
-[e :U 173 ]
-[; ;Prin-Raspi.c: 109: }
 [; ;Prin-Raspi.c: 110: _delay((unsigned long)((100)*(4000000/4000.0)));
 "110
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -2079,45 +1998,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mandar (1 -> 2 `i ]
 [; ;Prin-Raspi.c: 114: while(!RCIF){
 "114
-[e $U 174  ]
-[e :U 175 ]
+[e $U 162  ]
+[e :U 163 ]
 {
 "115
 }
-[e :U 174 ]
+[e :U 162 ]
 "114
-[e $ ! _RCIF 175  ]
-[e :U 176 ]
+[e $ ! _RCIF 163  ]
+[e :U 164 ]
 [; ;Prin-Raspi.c: 115: }
 [; ;Prin-Raspi.c: 116: B1 = RCREG;
 "116
 [e = _B1 -> _RCREG `i ]
-[; ;Prin-Raspi.c: 117: if(B1%2){
-"117
-[e $ ! != % _B1 -> 2 `i -> 0 `i 177  ]
-{
-[; ;Prin-Raspi.c: 118: B = B1/2;
-"118
-[e = _B / _B1 -> 2 `i ]
-[; ;Prin-Raspi.c: 119: b = B+1;
-"119
-[e = _b + _B -> 1 `i ]
-"120
-}
-[; ;Prin-Raspi.c: 120: } else{
-[e $U 178  ]
-[e :U 177 ]
-{
-[; ;Prin-Raspi.c: 121: B = B1/2;
-"121
-[e = _B / _B1 -> 2 `i ]
-[; ;Prin-Raspi.c: 122: b = B;
-"122
-[e = _b _B ]
-"123
-}
-[e :U 178 ]
-[; ;Prin-Raspi.c: 123: }
 [; ;Prin-Raspi.c: 124: _delay((unsigned long)((100)*(4000000/4000.0)));
 "124
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -2126,45 +2019,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mandar (1 -> 3 `i ]
 [; ;Prin-Raspi.c: 128: while(!RCIF){
 "128
-[e $U 179  ]
-[e :U 180 ]
+[e $U 165  ]
+[e :U 166 ]
 {
 "129
 }
-[e :U 179 ]
+[e :U 165 ]
 "128
-[e $ ! _RCIF 180  ]
-[e :U 181 ]
+[e $ ! _RCIF 166  ]
+[e :U 167 ]
 [; ;Prin-Raspi.c: 129: }
 [; ;Prin-Raspi.c: 130: C1 = RCREG;
 "130
 [e = _C1 -> _RCREG `i ]
-[; ;Prin-Raspi.c: 131: if(C1%2){
-"131
-[e $ ! != % _C1 -> 2 `i -> 0 `i 182  ]
-{
-[; ;Prin-Raspi.c: 132: C = C1/2;
-"132
-[e = _C / _C1 -> 2 `i ]
-[; ;Prin-Raspi.c: 133: c = C+1;
-"133
-[e = _c + _C -> 1 `i ]
-"134
-}
-[; ;Prin-Raspi.c: 134: } else{
-[e $U 183  ]
-[e :U 182 ]
-{
-[; ;Prin-Raspi.c: 135: C = C1/2;
-"135
-[e = _C / _C1 -> 2 `i ]
-[; ;Prin-Raspi.c: 136: c = C;
-"136
-[e = _c _C ]
-"137
-}
-[e :U 183 ]
-[; ;Prin-Raspi.c: 137: }
 [; ;Prin-Raspi.c: 138: _delay((unsigned long)((100)*(4000000/4000.0)));
 "138
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -2173,45 +2040,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mandar (1 -> 4 `i ]
 [; ;Prin-Raspi.c: 142: while(!RCIF){
 "142
-[e $U 184  ]
-[e :U 185 ]
+[e $U 168  ]
+[e :U 169 ]
 {
 "143
 }
-[e :U 184 ]
+[e :U 168 ]
 "142
-[e $ ! _RCIF 185  ]
-[e :U 186 ]
+[e $ ! _RCIF 169  ]
+[e :U 170 ]
 [; ;Prin-Raspi.c: 143: }
 [; ;Prin-Raspi.c: 144: D1 = RCREG;
 "144
 [e = _D1 -> _RCREG `i ]
-[; ;Prin-Raspi.c: 145: if(D1%2){
-"145
-[e $ ! != % _D1 -> 2 `i -> 0 `i 187  ]
-{
-[; ;Prin-Raspi.c: 146: D = D1/2;
-"146
-[e = _D / _D1 -> 2 `i ]
-[; ;Prin-Raspi.c: 147: d = D+1;
-"147
-[e = _d + _D -> 1 `i ]
-"148
-}
-[; ;Prin-Raspi.c: 148: } else{
-[e $U 188  ]
-[e :U 187 ]
-{
-[; ;Prin-Raspi.c: 149: D = D1/2;
-"149
-[e = _D / _D1 -> 2 `i ]
-[; ;Prin-Raspi.c: 150: d = D;
-"150
-[e = _d _D ]
-"151
-}
-[e :U 188 ]
-[; ;Prin-Raspi.c: 151: }
 [; ;Prin-Raspi.c: 152: _delay((unsigned long)((100)*(4000000/4000.0)));
 "152
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -2220,58 +2061,32 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _mandar (1 -> 5 `i ]
 [; ;Prin-Raspi.c: 156: while(!RCIF){
 "156
-[e $U 189  ]
-[e :U 190 ]
+[e $U 171  ]
+[e :U 172 ]
 {
 "157
 }
-[e :U 189 ]
+[e :U 171 ]
 "156
-[e $ ! _RCIF 190  ]
-[e :U 191 ]
+[e $ ! _RCIF 172  ]
+[e :U 173 ]
 [; ;Prin-Raspi.c: 157: }
 [; ;Prin-Raspi.c: 158: E1 = RCREG;
 "158
 [e = _E1 -> _RCREG `i ]
-[; ;Prin-Raspi.c: 159: if(E1%2){
-"159
-[e $ ! != % _E1 -> 2 `i -> 0 `i 192  ]
-{
-[; ;Prin-Raspi.c: 160: E = E1/2;
-"160
-[e = _E / _E1 -> 2 `i ]
-[; ;Prin-Raspi.c: 161: e = E+1;
-"161
-[e = _e + _E -> 1 `i ]
-"162
-}
-[; ;Prin-Raspi.c: 162: } else{
-[e $U 193  ]
-[e :U 192 ]
-{
-[; ;Prin-Raspi.c: 163: E = E1/2;
-"163
-[e = _E / _E1 -> 2 `i ]
-[; ;Prin-Raspi.c: 164: e = E;
-"164
-[e = _e _E ]
-"165
-}
-[e :U 193 ]
-[; ;Prin-Raspi.c: 165: }
 [; ;Prin-Raspi.c: 166: _delay((unsigned long)((100)*(4000000/4000.0)));
 "166
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "167
 }
-[e :U 166 ]
+[e :U 156 ]
 "91
-[e $U 167  ]
-[e :U 168 ]
+[e $U 157  ]
+[e :U 158 ]
 [; ;Prin-Raspi.c: 167: }
 [; ;Prin-Raspi.c: 168: }
 "168
-[e :UE 165 ]
+[e :UE 155 ]
 }
 [p f _sprintf 8454272 ]
 [a 4C 37 46 49 100 32 37 46 49 100 32 32 37 46 51 100 32 37 46 49 100 32 32 32 32 37 46 100 0 ]

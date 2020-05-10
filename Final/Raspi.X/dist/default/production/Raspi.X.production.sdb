@@ -45,8 +45,6 @@ SPI_CLOCK_IDLE_LOW 0
 SPI_IDLE_2_ACTIVE 0
 SPI_ACTIVE_2_IDLE 64
 ]
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
 "500 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\isdigit.c
@@ -311,16 +309,6 @@ SPI_ACTIVE_2_IDLE 64
 "358 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "32 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Raspi.X\Prin-Raspi.c
-[v _a a `i  1 e 2 0 ]
-[v _b b `i  1 e 2 0 ]
-[v _c c `i  1 e 2 0 ]
-[v _d d `i  1 e 2 0 ]
-[v _e e `i  1 e 2 0 ]
-[v _A A `i  1 e 2 0 ]
-[v _B B `i  1 e 2 0 ]
-[v _C C `i  1 e 2 0 ]
-[v _D D `i  1 e 2 0 ]
-[v _E E `i  1 e 2 0 ]
 [v _A1 A1 `i  1 e 2 0 ]
 [v _B1 B1 `i  1 e 2 0 ]
 [v _C1 C1 `i  1 e 2 0 ]
@@ -458,19 +446,6 @@ SPI_ACTIVE_2_IDLE 64
 [v _config config `(v  1 e 1 0 ]
 {
 "21
-} 0
-"5 C:\Program Files (x86)\Microchip\xc8\v2.00\pic\sources\c90\common\awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-{
-"10
-[v ___awdiv@quotient quotient `i  1 a 2 7 ]
-"11
-[v ___awdiv@sign sign `uc  1 a 1 6 ]
-[v ___awdiv@counter counter `uc  1 a 1 5 ]
-"5
-[v ___awdiv@divisor divisor `i  1 p 2 0 ]
-[v ___awdiv@dividend dividend `i  1 p 2 2 ]
-"41
 } 0
 "98 C:\Users\José Javier Estrada\Desktop\Digital 2\MPLab\Raspi.X\LCD.c
 [v _LCD_STRING LCD_STRING `(v  1 e 1 0 ]
